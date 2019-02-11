@@ -28,11 +28,11 @@ end
 def bulk_tweet_shortener(tweets)
   tweets.each do |tweet|
     tweet.split.map do |word|
-    if dictionary.keys.include?(word)
-      word = dictionary[word]
-    else
-      word = word
-    end
-  end.join(" ")
+      if dictionary.keys.include?(word)
+        word = dictionary[word]
+      else
+        word = word
+      end
+    end.join(" ")
   end
 end
