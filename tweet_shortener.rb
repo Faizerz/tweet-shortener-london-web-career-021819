@@ -24,3 +24,15 @@ def word_substituter(tweet)
   end.join(" ")
 end
     
+    
+def bulk_tweet_shortner(tweets)
+  tweets.each do |tweet|
+    tweet.split.map do |word|
+    if dictionary.keys.include?(word)
+      word = dictionary[word]
+    else
+      word = word
+    end
+  end.join(" ")
+  end
+end
